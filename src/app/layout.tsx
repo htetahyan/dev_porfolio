@@ -1,8 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {Bebas_Neue, Oswald} from 'next/font/google'
 import './globals.css'
+import Providers from "@/utils/Providers";
 
-const inter = Inter({ subsets: ['latin'] })
+const Bebas = Bebas_Neue({
+    subsets: ['latin'] ,
+    weight: '400',
+    display: 'swap',
+    preload: true,
+    variable: '--font-bebas',
+})
+const oswald=Oswald({
+    weight: '200',
+    display: 'swap',
+    subsets: ['latin'],
+    preload: true,
+    variable: '--font-oswald',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +29,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning className={`${Bebas.variable} ${oswald.variable}`}>
+      <body >
+      <Providers >
+      {children}
+      </Providers></body>
     </html>
   )
 }
