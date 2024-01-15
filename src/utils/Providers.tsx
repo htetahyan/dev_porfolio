@@ -5,7 +5,9 @@ import {ThemeProvider} from "next-themes";
 import { type ThemeProviderProps } from "next-themes/dist/types";
 import LenisScroller from "@/utils/LenisScroller";
 
+
 const Providers = ({ children }: ThemeProviderProps) => (
+
     <ThemeProvider
 attribute={'class'}
                    defaultTheme={'system'}
@@ -15,6 +17,7 @@ attribute={'class'}
         {children}
         </LenisScroller>
         </ThemeProvider>
+
 );
 
 export default Providers;

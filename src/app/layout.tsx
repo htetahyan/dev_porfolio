@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {Bebas_Neue, Oswald} from 'next/font/google'
 import './globals.css'
 import Providers from "@/utils/Providers";
+import Header from "@/components/header/Header";
+
 
 const Bebas = Bebas_Neue({
     subsets: ['latin'] ,
@@ -24,15 +26,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${Bebas.variable} ${oswald.variable}`}>
-      <body >
+    <html lang="en" suppressHydrationWarning className={`${Bebas.variable} ${oswald.variable}  `}>
+      <body className={'dark:bg-dark bg-white'} >
       <Providers >
-      {children}
+
+          <Header/>
+
+              {children}
       </Providers></body>
     </html>
   )

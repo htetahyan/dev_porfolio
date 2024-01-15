@@ -4,7 +4,7 @@ import {cn} from "@/utils/utils";
 
 
 const textVariants = cva(
-    'dark:text-light text-dark transition-colors duration-300',{
+    'dark:text-light text-dark  bg-transparent dark:bg-dark',{
         variants: {
           variant: {
               h1:'text-3xl ',
@@ -12,6 +12,10 @@ const textVariants = cva(
               h3:'text-xl',
 
           },
+            background:{
+
+                transparent:'bg-transparent'
+            },
             wide:{
                 normal:'tracking-tight',
                 wide:'tracking-wide'
@@ -27,6 +31,7 @@ defaultVariants: {
     variant: 'h1',
     wide: 'normal',
     font: 'primary',
+    background: 'transparent',
 
 }
         }

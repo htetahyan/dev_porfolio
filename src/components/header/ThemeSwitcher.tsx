@@ -27,10 +27,10 @@ const ThemeSwitcher = () => {
     )
 
     if(resolvedTheme === 'dark'){
-        return <DarkIcon className={'cursor-pointer w-full'} onClick={() => setTheme('light')}/>
+        return <LightIcon className={'cursor-pointer w-full text-white text-3xl'} onClick={() => setTheme('light')}/>
     }
     if(resolvedTheme === 'light'){
-        return <LightIcon className={'cursor-pointer w-full'} onClick={() => setTheme('dark')}/>
+        return <DarkIcon className={'cursor-pointer w-full text-dark dark:text-light text-3xl'} onClick={() => setTheme('dark')}/>
     }
 };
 
