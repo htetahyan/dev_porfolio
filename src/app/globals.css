@@ -2,32 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 
 body {
-  color: rgb(var(--foreground-rgb));
+    color: rgb(var(--foreground-rgb));
 }
 
 
-.primary-font {
-    font-family: var(--font-bebas);
+
+
+.cursor{
+    position: fixed;
+    top: 0;
+    pointer-events: none;
+    left: 0;
+    width: 32px;
+    background: white;
+    height: 32px;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    z-index: 9999;
+
+}
+.hamburger{
+    position: relative;
+    height: 100%;
+    padding: 13px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.burger-one,
+.burger-two
+ {
+    width: 32px;
+    height: 5px;
+    background-color: white;
+    transition: all 0.5s;
+}
+.menu{
+
+height: 40%;
+    width: 40%;
+    cursor: pointer;
+    background: black;
+border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-container{
+    overflow: hidden;
+    position: fixed;
+    height: 150px;
+background: aquamarine;
+    width: 150px;
+ display: flex;
+justify-content: center;
+align-items: center;
+    bottom: 1%;
+    right: 1%;
+    z-index: 9;
+}
+.menu-modal{
+    position: fixed;
+    transform: translateY(-100%);
+    border-bottom-left-radius:40%;
+    border-bottom-right-radius: 40%;
+    height: 60vh;
+    width: 100vw;
+
+    top: 0;
+    z-index: 49;
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(10px);
+
+}
+.menu-container .menu-open .hamburger .burger-one{
+    transform: rotate(45deg) translate(5px, 7px);
+}
+.menu-container .menu-open .hamburger .burger-two{
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+.text-hover{
+position: relative;
 }
 
-.secondary-font {
-    font-family: var(--font-oswald);
+.text-hover:before{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 0;
+    height: 2px;
+}
+.text-hover:hover:before{
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    background: white;
 
+}
+.text-stroke{
+    background: transparent;
+   
+}
+@media screen and (max-width: 1024px) {
+    .cursor{
+        display: none;
+    }
 }

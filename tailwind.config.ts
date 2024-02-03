@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ['var(--font-NeuMontreal)'],
+        oswald: ['var(--font-oswald)'],
+      },
 colors: {
   'dark': '#000000',
     'transparent': 'transparent',

@@ -13,11 +13,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
     }, []);
 
     return (
-        <div className={'relative max-h-screen overflow-hidden'}>
+        <div className={'relative '}>
             <div
                 id="transition-element-1"
                 className="w-screen h-screen bg-gray-300 z-50 fixed top-0 left-0"
-            >H</div>
+            ></div>
             <div
                 id="transition-element-2"
                 className="w-screen  h-screen bg-black z-50 fixed top-[10vh] left-0"

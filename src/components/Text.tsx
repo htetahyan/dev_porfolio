@@ -1,12 +1,15 @@
-import React, {forwardRef} from 'react';
+'use client'
+import React, {forwardRef, useEffect} from 'react';
 import {cva, VariantProps} from "class-variance-authority";
 import {cn} from "@/utils/utils";
 
 
 const textVariants = cva(
-    'dark:text-light text-dark  bg-transparent dark:bg-dark',{
+    ' bg-transparent text',{
         variants: {
           variant: {
+              heading:'text-5xl md:text-8xl lg:text-10xl',
+              subHeading:'text-2xl md:text-4xl lg:text-5xl',
               h1:'text-3xl ',
               h2:'text-2xl',
               h3:'text-xl',
@@ -23,15 +26,15 @@ const textVariants = cva(
                 widest:'tracking-widest'
             },
             font:{
-                primary:'primary-font',
-                secondary:'secondary-font',
+                primary:'font-primary',
+                secondary:'font-oswald',
             },
 
 defaultVariants: {
     variant: 'h1',
     wide: 'normal',
     font: 'primary',
-    background: 'transparent',
+
 
 }
         }
@@ -43,11 +46,14 @@ interface TextProps extends React.ComponentProps<any>,VariantProps<typeof textVa
 }
 
 
-const Text = forwardRef< HTMLDivElement, TextProps> (({children,variant,className,wide,font,...props},ref) => {
+const Text = forwardRef< HTMLParagraphElement, TextProps> (({children,variant,className,wide,font,...props},ref) => {
+
+
+
     return (
-        <div {...props} className={cn(textVariants({variant,wide,font}),className)} ref={ref}>
+        <p {...props} className={cn(textVariants({variant,wide,font}),className+' text')} ref={ref}>
             {children}
-        </div>
+        </p>
     );
 })
 Text.displayName='Text'
