@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import {Bebas_Neue, Oswald} from 'next/font/google'
+
 import './globals.css'
 import Providers from "@/utils/Providers";
 import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
-import Cursor from "@/animations/Cursor";
+
 import localFont from "next/font/local";
 
 
@@ -14,14 +14,12 @@ const NeueMontreal=localFont(
         variable: '--font-NeuMontreal',
     }
 )
-
-const oswald=Oswald({
-    weight: '200',
-    display: 'swap',
-    subsets: ['latin'],
-    preload: true,
-    variable: '--font-oswald',
-})
+const NeueMontrealRegular=localFont(
+    {
+        src: '../fonts/NeueMontreal-Regular.woff2',
+        variable: '--font-NeuMontrealRegular',
+    }
+)
 
 export const metadata: Metadata = {
   title: 'Htet Ah Yan',
@@ -34,15 +32,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning  className={`${NeueMontreal.variable} ${oswald.variable}  `}>
+    <html lang="en" suppressHydrationWarning  className={`${NeueMontreal.variable} ${NeueMontrealRegular.variable}  `}>
       <body className={'bg-white'} >
       <Providers >
 
-          <Header/>
+
 
               {children}
-          <Menu/>
-          <Cursor/>
+
+
       </Providers></body>
     </html>
   )

@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         primary: ['var(--font-NeuMontreal)'],
-        oswald: ['var(--font-oswald)'],
+        secondary: ['var(--font-NeuMontrealRegular)'],
       },
 colors: {
   'dark': '#000000',

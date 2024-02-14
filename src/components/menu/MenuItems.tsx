@@ -18,7 +18,7 @@ const MenuItems = ({setOpen}: {setOpen: React.Dispatch<React.SetStateAction<bool
             {items.map((item, index) => (
                 <li  key={index} onClick={() => setOpen(false)}>
                     <TransitionLink
-                        className={'text-5xl text-hover primary-font text-white text text-center hover:text-neutral-100'}
+                        className={'text-5xl text-hover font-primary text-white text text-center hover:text-neutral-100'}
                         href={item.path} label={item.label}/>
                 </li>
             ))}
@@ -43,10 +43,10 @@ const items=[{
     label: 'Home',
     path: '/',
 },{
-    label:'works',
-    path: '/test',
+    label:'Works',
+    path: '/works',
 },{
-    label:'about',
+    label:'About',
     path: '/about',
 }]
 const socialLinks = [

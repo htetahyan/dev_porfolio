@@ -17,12 +17,20 @@ const createTimeline = (elementId: string, initialXPercent: number, finalXPercen
 
 export const animatePageIn = () => {
     const tl1 = createTimeline("transition-element-1", 200, -100, "10vh");
+
+
     const tl2 = createTimeline("transition-element-2", 0, 100, "10vh");
+
     tl2.add(tl1, "<");
 };
 
 export const animatePageOut = ({href, router}: {href: string, router: AppRouterInstance}) => {
+
+
     const tl1 = createTimeline("transition-element-1", -100, 0, "10vh");
+    tl1.eventCallback("onStart", () => {
+        router.prefetch(href);
+    })
     const tl2 = createTimeline("transition-element-2", 100, 0, "10vh");
     tl1.eventCallback("onComplete", () => {
         router.push(href);

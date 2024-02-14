@@ -13,7 +13,7 @@ variant: {
     success: 'bg-green-500 text-white font-bold py-2 px-4 rounded',
     warning: 'bg-yellow-500  font-bold py-2 px-4 rounded',
     border: 'border border-blue-500 text-blue-500 font-bold py-2 px-4 rounded',
-    ghost: 'bg-transparent font-bold py-2 px-4 rounded hover:bg-gray-200 text-dark dark:text-light',
+    ghost: 'bg-transparent font-bold py-2 px-4 rounded hover:bg-gray-200 transition-all',
     link: 'text-blue-500 font-bold py-2 px-4 rounded'},
             size:{
     default: 'py-2 px-4',

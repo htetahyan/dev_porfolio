@@ -5,7 +5,7 @@ import {cn} from "@/utils/utils";
 
 
 const textVariants = cva(
-    ' bg-transparent text',{
+    ' bg-transparent txt',{
         variants: {
           variant: {
               heading:'text-5xl md:text-8xl lg:text-10xl',
@@ -27,7 +27,7 @@ const textVariants = cva(
             },
             font:{
                 primary:'font-primary',
-                secondary:'font-oswald',
+                secondary:'font-secondary',
             },
 
 defaultVariants: {
