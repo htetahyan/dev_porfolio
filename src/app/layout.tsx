@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: 'Htet Ah Yan',
   description: 'An awesome web developer who loves to build web applications.',
     metadataBase: new URL('https://htetahyan.vercel.app'),
-    
+
   
     robots: {
         index: true,
