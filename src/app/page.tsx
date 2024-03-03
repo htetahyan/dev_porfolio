@@ -17,10 +17,7 @@ const Page = () => {
                 <Hero/>
 
             </section>
-            <section className=" w-full p-8">
-                <AboutIntro/>
-
-            </section>
+            
             <section className="h-full  flex items-center relative  justify-center">
                 <First/>
 

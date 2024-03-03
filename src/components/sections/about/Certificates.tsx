@@ -26,7 +26,7 @@ const Certificates = () => {
         }
     })
     return (
-        <div className={'w-full grid grid-cols-1 lg:grid-cols-2 h-screen gap-2 relative '}>
+        <div className={'w-full grid grid-cols-1 lg:grid-cols-2 h-fit gap-2 relative '}>
             <Text variant={'heading'} font={'secondary'} className={'absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2'}>
                 CERTIFICATES
             </Text>
