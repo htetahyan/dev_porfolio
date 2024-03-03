@@ -65,7 +65,8 @@ twitter: {
   images: ['https://htetahyan.vercel.app/opengraph.png']
 },
     openGraph: {
-        title: 'Htet Ah Yan',
+        title: 'Htet Ah Yan\'s Portfolio',
+
         description: 'An awesome web developer who loves to build web applications.',
         url: 'https://htetahyan.vercel.app/',
         releaseDate: '2023-03-02',

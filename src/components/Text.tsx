@@ -46,14 +46,14 @@ interface TextProps extends React.ComponentProps<any>,VariantProps<typeof textVa
 }
 
 
-const Text = forwardRef< HTMLParagraphElement, TextProps> (({children,variant,className,wide,font,...props},ref) => {
+const Text = forwardRef< HTMLHeadingElement, TextProps> (({children,variant,className,wide,font,...props},ref) => {
 
 
 
     return (
-        <p {...props} className={cn(textVariants({variant,wide,font}),className+' text')} ref={ref}>
+        <h2 {...props} className={cn(textVariants({variant,wide,font}),className+' text')} ref={ref}>
             {children}
-        </p>
+        </h2>
     );
 })
 Text.displayName='Text'
