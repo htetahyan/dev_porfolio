@@ -1,6 +1,7 @@
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { gsap } from "gsap";
-
+import {Router} from "next/router";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const createTimeline = (elementId: string, initialXPercent: number, finalXPercent: number, height: string) => {
     const tl = gsap.timeline();
     tl.set(`#${elementId}`, {
@@ -18,7 +19,10 @@ const createTimeline = (elementId: string, initialXPercent: number, finalXPercen
 export const animatePageIn = () => {
     const tl1 = createTimeline("transition-element-1", 200, -100, "10vh");
 
-
+tl1.eventCallback('onStart',()=>{
+    window.scrollTo(0, 0)
+ScrollTrigger.clearScrollMemory()
+})
     const tl2 = createTimeline("transition-element-2", 0, 100, "10vh");
 
     tl2.add(tl1, "<");
@@ -28,12 +32,18 @@ export const animatePageOut = ({href, router}: {href: string, router: AppRouterI
 
 
     const tl1 = createTimeline("transition-element-1", -100, 0, "10vh");
-    tl1.eventCallback("onStart", () => {
-        router.prefetch(href);
-    })
+
     const tl2 = createTimeline("transition-element-2", 100, 0, "10vh");
-    tl1.eventCallback("onComplete", () => {
+    tl2.eventCallback('onComplete',()=>{
+
         router.push(href);
+
+    })
+    tl1.eventCallback("onComplete", () => {
+
+        router.refresh();
+        window.scrollTo(0,0)
+
 
     });
     tl1.add(tl2, "<");

@@ -1,10 +1,11 @@
 'use client'
 import React, {useRef} from 'react';
-import {splitWords} from "@/components/sections/Hero/Hero";
+
 import {useGSAP} from "@gsap/react";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-import {useIsomorphicLayoutEffect} from "@/utils/useisomorphiclayouteffect";
+import {splitWords} from "@/animations/TextAnimation";
+
 
 const First = () => {
     const rafs = useRef([]);
@@ -36,9 +37,9 @@ const First = () => {
         <div
             className={' lg-px-10 px-2 first-text-container relative lg:mt-10  w-full grid justify-center items-center'}>
             <div className={'second-line-showcase justify-self-center bg-black h-1 w-0'}></div>
-            <div className={'first-text-'}>
-                {splitWords(phrase, '   text-xl lg:text-5xl text ' +
-                    ' relative inline-block justify-center', ' font-secondary relative opacity-30 inline-block', rafs)}
+            <div className={'first-text- lg:px-2'}>
+                {splitWords(phrase, '   text-2xl lg:text-5xl text tracking-tighter ' +
+                    ' relative inline-block ', ' font-secondary relative opacity-30 inline-block', rafs)}
             </div>
 
         </div>
@@ -46,4 +47,4 @@ const First = () => {
 };
 
 export default First;
-const phrase = "  I am a full-stack developer with a passion for creating beautiful and performant web applications, currently open to work and always looking for new opportunities to learn and grow as a developer.    I have a strong foundation in frontend and backend development, and I am always looking for new ways to improve my skills. "
+const phrase = " I am a full-stack developer with a passion for creating beautiful and performant web applications, currently open to work and always looking for new opportunities to learn and grow as a developer. I have a strong foundation in frontend and backend development, and I am always looking for new ways to improve my skills. "

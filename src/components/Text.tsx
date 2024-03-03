@@ -9,10 +9,10 @@ const textVariants = cva(
         variants: {
           variant: {
               heading:'text-5xl md:text-8xl lg:text-10xl',
-              subHeading:'text-2xl md:text-4xl lg:text-5xl',
-              h1:'text-3xl ',
-              h2:'text-2xl',
-              h3:'text-xl',
+              subHeading:'text-2xl md:text-5xl lg:text-7xl',
+              h1:'text-3xl md:text-5xl lg:text-6xl',
+              h2:'text-2xl md:text-3xl lg:text-4xl',
+              h3:'text-xl md:text-2xl lg:text-3xl',
 
           },
             background:{

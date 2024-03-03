@@ -98,7 +98,7 @@ overflow-x: hidden;
 
     top: 0;
     z-index: 49;
-    background: rgba(0, 0, 0, 0.76);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
 
 }

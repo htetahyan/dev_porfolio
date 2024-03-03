@@ -21,6 +21,7 @@ const Second = () => {
 
                 start: '-=400px',
                 end: '+=100px',
+
                 scrub:  1
             },
         })
@@ -40,16 +41,17 @@ const Second = () => {
 
         // Animate text elements using a loop
         secondTextElements.forEach(text => {
-            gsap.to(text, {
+            gsap.to(text.children, {
                 yPercent:  0,
                 y:  0,
                 opacity:  1,
                 ease: "power4.out",
+                stagger:  0.05,
                 duration:  0.2,
                 scrollTrigger: {
                     trigger: text.parentElement,
-                    start: "-=400px",
-                    end: "+=100px",
+                    start: "-=300px",
+                    end: "+=200px",
 
                     scrub: true
                 }
@@ -110,9 +112,16 @@ const lines=document.querySelectorAll('.second-line-showcase')
             {showCases.map((showCase,index)=> {
           return(       <div key={index}
                     className={'flex  min-h-[40vh] lg:min-h-[80vh] relative w-full mt-4 items-center justify-center flex-col work-showcase overflow-hidden lg:flex-row'}>
+ <div className={'second-text w-full flex-1 '}>
+     {showCase.title.split(' ').map((t,i)=>{
+         return(
+             <Text key={i} className={'text-4xl md:text-6xl lg:text-9xl font-secondary  translate-y-[150%]'}>{t}</Text>
 
-                    <Text className={'text-4xl md:text-6xl lg:text-9xl font-secondary max-w-1/4  second-text translate-y-[150%]'}>{showCase.title}</Text>
-                    <div className={'second-image-container w-full lg:w-2/3 '}>
+         )
+     })}
+
+ </div>
+                    <div className={'second-image-container w-full flex-1 '}>
                         <div className={'second-image-wrapper '}>
                             <Image src={showCase.image} alt={'portal'} className={' second-image border-2 '}/>
                         </div>

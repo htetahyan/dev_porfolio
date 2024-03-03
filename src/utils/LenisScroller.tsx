@@ -1,36 +1,36 @@
-import { useEffect } from 'react';
+import {ReactNode, useEffect, useRef} from 'react';
 import { useGSAP } from '@gsap/react';
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {usePathname} from "next/navigation";
 
-const LenisScroller = ({ children }: { children: React.ReactNode }) => {
-  const { context, contextSafe } =  useGSAP(() => {
+const LenisScroller = ({ children }: { children: ReactNode  }) => {
+    const lenisRef = useRef()
+    const path=usePathname()
+
+
+  const {  } =  useGSAP(( contextSafe) => {
         gsap.registerPlugin(ScrollTrigger);
-
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(4, -10 * t)),
-
-            lerp: 0.05,
-        });
+      const lenis = new Lenis()
 
 
 
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 500);
-        });
+      lenis.on('scroll', ScrollTrigger.update)
+const updateScroll = (time:number) => {
+    lenis.raf(time * 200)
+}
+      gsap.ticker.add(updateScroll)
 
-//horizontal
-
+      gsap.ticker.lagSmoothing(0)
+      //horizontal
         // Cleanup on unmount
         return () => {
+gsap.ticker.remove(updateScroll)
 
-            lenis.off('scroll', ScrollTrigger.update);
-         gsap.ticker.sleep()
         };
-    }, []);
+
+    }, [path]);
 
 
     return <>{children}</>;

@@ -19,20 +19,15 @@ variant: {
     default: 'py-2 px-4',
     sm: 'py-1 px-2',
     lg: 'py-4 px-8'
-
             },
             font: {
                 primary: 'primary-font',
                 secondary: 'secondary-font ',
             },
-
         },
-
         defaultVariants: {
             variant: 'primary',
             size: 'default',
-
-
         }
 }
 

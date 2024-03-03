@@ -4,6 +4,7 @@
 import {usePathname, useRouter} from "next/navigation";
 import { animatePageOut } from "@/animations/PageAnimate";
 
+
 export default function TransitionLink({
                                            href,
                                            label,
@@ -15,6 +16,7 @@ export default function TransitionLink({
 }) {
     const router = useRouter();
 const pathname=usePathname()
+
     const handleClick = () => {
         if (pathname === href) return;
         animatePageOut({href, router});
@@ -22,7 +24,7 @@ const pathname=usePathname()
 
     return (
         <button
-            className={className + " border-[1px] border-black p-4 rounded-xl hover:bg-black hover:text-neutral-100 cursor-pointer"}
+            className={className + " border-[1px] border-black p-4 rounded-xl hover:bg-black  cursor-pointer"}
             onClick={handleClick}
         >
             {label}

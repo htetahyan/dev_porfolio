@@ -3,14 +3,16 @@ import React from 'react';
 import { gsap } from "gsap";
 
 import { Observer } from "gsap/dist/Observer";
-import { useEffect } from "react";
-import Image from "next/image";
-import social from '@/assets/pngs/portal.png'
+
+import {portal,yearbook,portal_2,report,report_2,social,social_2,yearbook_2,yearbook_3,yearbook_4,yearbook_5} from '@/assets/pngs/exporter';
 import {Text} from "@/components/Text";
-import {Button} from "@/components/Button";
-import {Icons} from "@/assets/SvgExporter";
+
+
+import Carousel from "@/components/Carousel";
+import {useIsomorphicLayoutEffect} from "@/utils/useisomorphiclayouteffect";
+import {Scroll} from "@/assets/SvgExporter";
 const Projects = () => {
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         gsap.registerPlugin(Observer);
         let sectionContainer = document.querySelector(".section-container");
 
@@ -21,19 +23,27 @@ const Projects = () => {
             currentIndex = -1,
             wrap = gsap.utils.wrap(0, sections.length),
             animating: boolean;
-
+      const projectTitle=document.querySelectorAll('.project-title')
         gsap.set(outerWrappers, { yPercent: 100 });
         gsap.set(innerWrappers, { yPercent: -100 });
 
         function gotoSection(index: number, direction: number) {
             index = wrap(index); // make sure it's valid
             animating = true;
-            console.log(index)
+
             gsap.to('.bg',{
                 backgroundImage: bgColors[index],
                 ease:'power1.in',
                 duration:0.5
             })
+           projectTitle.forEach((pj,i)=> {
+               gsap.to(pj,{
+                   delay:1,
+                   ease:'power1.in',
+                   opacity: index ===i?1:0
+               })
+           })
+
             let fromTop = direction === -1,
                 dFactor = fromTop ? -1 : 1,
                 tl = gsap.timeline({
@@ -82,61 +92,44 @@ gotoSection(0,1)
 
 
     },[]);
-const {Scroll,Next} =Icons
+
     return (
         <div className={'h-full w-full projects-container'}>
+            {ProjectsDatas.map((project, index) => (
+                <section key={index} className="first section">
 
-            <section className="first section">
+                    <div className="outer">
+                        <div className="inner">
+                            <div className="bg justify-center relative p-2">
 
-                <div className="outer">
-                    <div className="inner">
-                        <div className="bg justify-center relative p-2">
+                                <div className={'flex flex-col justify-center h-full'}>
+                                    <Text variant={'heading'} className={'project-title opacity-0'}>{project.title}</Text>
 
-                            <div className={'flex flex-col justify-around h-3/4'}>
-                                <Text variant={'heading'}>PORTAL</Text>
-                                <Image src={social} className={' max-w-screen lg:max-w-[50vw]'} alt={''}/>
+                                    <div className={'w-screen  lg:w-[60vw]   '}>
 
-                                <Button variant={'ghost'}
-                                        className={'text-2xl lg:hidden flex items-center justify-center'}>NEXT<Next
-                                    className={'block max-w-8 max-h-8 lg:hidden'}/></Button>
-                                <div
-                                    className={'lg:absolute bottom-0 left-0 max-h-[15vh] max-w-fit mx-auto lg:left-[10%] lg:top-0 flex items-center'}>
-                                    <div>{['S', 'C', 'R', 'O', 'L', 'L'].map((letter, index) => (
-                                        <Text key={index}
-                                              className={'text-lg md:text-xl lg:text-2xl text-center'}>{letter}</Text>
-                                    ))}</div>
-                                    <Scroll className={'max-w-32 max-h-96'}/>
+                                        <Carousel
+                                        images={project.assets}/>
+
+                                    </div>
+
+                                    <div
+                                        className={'absolute bottom-[5%] lg:bottom-[10%] left-0 max-h-[15vh] max-w-fit mx-auto lg:left-[10%]  flex items-center'}>
+                                        <div>{['S', 'C', 'R', 'O', 'L', 'L'].map((letter, index) => (
+                                            <Text key={index}
+                                                  className={'text-lg md:text-xl lg:text-2xl text-center'}>{letter}</Text>
+                                        ))}</div>
+                                        <Scroll className={'max-w-32 max-h-96'}/>
+                                    </div>
                                 </div>
+
                             </div>
-                            <Next
-                                className={'hidden lg:block max-w-10  right-0 lg:max-w-28 absolute lg:right-[10%] lg:top-0'}/>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section className="first section">
-
-                <div className="outer">
-                    <div className="inner">
-                        <div className="bg justify-center relative">
-                        <div className={'absolute left-[10%] top-0 flex items-center'}>
-                                <div>{['S', 'C', 'R', 'O', 'L', 'L'].map((letter, index) => (
-                                    <Text key={index} className={'text-2xl text-center'}>{letter}</Text>
-                                ))}</div>
-                                <Scroll className={'max-w-32'}/>
-                            </div>
-                            <div className={'flex flex-col justify-around h-3/4'}>
-                                <Text variant={'heading'}>PORTAL</Text>
-                                <Image src={social} className={' max-w-[50vw]'} alt={''}/>
+                </section>
 
 
-                            </div>
-                            <Next className={'max-w-28 absolute right-[10%] top-0'}/>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            ))}
+
 
         </div>
     );
@@ -151,3 +144,29 @@ const bgColors = ['linear-gradient(to right,  #F5F5F5,#FBD3CB,#FFFFFF)',
     'linear-gradient(to right,  #F5F5F5,#ECD9FA,#FFFFFF)',
     'linear-gradient(to right,  #F5F5F5,#FFE7B3,#FFFFFF)'
 ]
+export const ProjectsDatas = [{
+    title: 'PORTAL',
+    description: 'a social media platform for developers',
+    assets: [{type: 'image', src: portal}, {type: 'image', src: portal_2},
+        {type: 'explanation', contributions:["setting up env configurations","integrated with aws s3 bucket"],  href: 'https://www.google.com',linkText:"source code"}],
+},{
+    title: 'EDUSOCIAL',
+    description: 'a social media platform for developers',
+    assets: [{type: 'image', src: social}, {type: 'image', src: social_2},
+        {type: 'explanation', contributions:['integrated google adult content filter api', 'integrated google location api'], href: 'https://www.google.com',linkText:"source code"}],
+},{
+    title: 'YEARBOOK',
+    description: 'Yearbook website for students',
+    assets: [{type: 'image', src: yearbook}, {type: 'image', src: yearbook_2},{type: 'image', src: yearbook_3},
+        {type: 'image', src: yearbook_4},{type: 'image', src: yearbook_5},
+        {type: 'explanation', contributions:['spring security authentication with otp base register', 'integrated with aws s3 bucket',
+                'implemented like and comment feature on yearbook cards!',  'implemented rtk query with next js front end'],  href: 'https://www.google.com',linkText:"source code"}],
+},{
+    title: 'REPORT',
+    description: 'Yearbook website for students',
+    assets: [{type: 'image', src: report}, {type: 'image', src: report_2},
+
+        {type: 'explanation', contributions:[ 'secured API with Spring security',
+                'implemented rtk query with next js front end','deploy on vps server'],linkText:"link is confidential"}],
+}]
+export type ProjectDATA = typeof ProjectsDatas

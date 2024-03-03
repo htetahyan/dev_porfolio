@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
 
 import localFont from "next/font/local";
+import {ReactNode} from "react";
 
 
 const NeueMontreal=localFont(
@@ -22,14 +23,14 @@ const NeueMontrealRegular=localFont(
 )
 
 export const metadata: Metadata = {
-  title: 'Htet Ah Yan',
+  title: 'Edusn',
   description: 'Developer Portfolio',
 }
 
 export default function RootLayout({
   children
 }: {
-  children: React.ReactNode
+  children:ReactNode
 }) {
   return (
     <html lang="en" suppressHydrationWarning  className={`${NeueMontreal.variable} ${NeueMontrealRegular.variable}  `}>
