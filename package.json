@@ -13,6 +13,7 @@
     "@studio-freight/lenis": "^1.0.34",
     "@studio-freight/react-lenis": "^0.0.43",
     "@tailwindcss/typography": "^0.5.10",
+    "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "gsap": "^3.12.4",
@@ -20,7 +21,6 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {

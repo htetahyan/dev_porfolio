@@ -5,6 +5,7 @@ import Providers from "@/utils/Providers";
 
 import localFont from "next/font/local";
 import {ReactNode} from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 
@@ -88,7 +89,7 @@ export default function RootLayout({
 }) {
   return (
       <html lang="en" suppressHydrationWarning className={`${NeueMontreal.variable} ${NeueMontrealRegular.variable}  `}>
-
+<SpeedInsights/>
       <body className={'bg-white'}>
       <Providers>
 
