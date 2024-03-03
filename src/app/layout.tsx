@@ -24,7 +24,7 @@ const NeueMontrealRegular=localFont(
 export const metadata: Metadata = {
   title: 'Htet Ah Yan',
 
-  description: 'An awesome web developer who loves to build web applications.',
+  description: 'An innovative software engineer.',
     metadataBase: new URL('https://htetahyan.vercel.app'),
   keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan'],
 
@@ -36,17 +36,30 @@ export const metadata: Metadata = {
             index: true
         }
     },
-    icons: {
-        icon: '/favicon.ico',
-        apple: '/favicon.ico',
-        shortcut: '/favicon.ico'
-
-    },
+    icons:[{
+      rel: 'icon',
+      type: 'image/png',
+        sizes:'16x16',
+        url: '/favicons/android-chrome-192x192.png'
+    }
+    ,{
+        rel: 'icon',
+        type: 'image/png',
+        sizes:'32x32',
+        url: '/favicons/android-chrome-512x512.png'
+        }
+        ,{
+            rel: 'apple-touch-icon',
+            type: 'image/png',
+            sizes:'180x180',
+            url: '/favicons/apple-touch-icon.png'
+        }
+    ],
 
 twitter: {
   card: 'summary',
   title: 'Htet Ah Yan',
-  description: 'An awesome web developer who loves to build web applications.',
+  description: 'An innovative software engineer.',
   creator: 'Htet Ah Yan',
   images: ['https://htetahyan.vercel.app/opengraph.png']
 },
