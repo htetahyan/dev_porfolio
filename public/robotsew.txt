@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Host: https://htetahyan.vercel.app
-Sitemap: https://htetahyan.vercel.app/sitemap.xml
