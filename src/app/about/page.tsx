@@ -2,10 +2,10 @@ import React from 'react';
 
 import dynamic from "next/dynamic";
 import AboutOne from "@/components/sections/about/About_One";
-import {Text} from "@/components/Text";
+
 import Abt from "@/components/sections/about/abt";
 import Education from "@/components/sections/about/Education";
-import AbtHEADING from "@/components/sections/about/AboutPageWrapper";
+import AbtHEADING from "@/components/sections/about/AbtHeading";
 import Certificates from "@/components/sections/about/Certificates";
 import Contact from "@/components/Contact";
 
@@ -20,24 +20,24 @@ const About = () => {
             </div>
             <div className={'h-full w-full p-4 lg:p-8'}>
             <div className={' w-full   h-fit '}>
-                <AbtHEADING heading={'01/'}/>
+                <AbtHEADING heading={'01/'}  variant={'head'}/>
                 <AboutOne/>
             </div>
             <div className={' w-full  overflow-hidden h-fit '}>
-                <AbtHEADING heading={'02/'}/>
+                <AbtHEADING heading={'02/'}  variant={'head'}/>
 
                 <AboutTwo/>
             </div>
             <div className={' w-full relative h-fit '}>
-                <AbtHEADING heading={'03/'}/>
+                <AbtHEADING heading={'03/'}  variant={'head'}/>
                 <Education/>
             </div>
             <div className={' w-full relative h-fit '}>
-                <AbtHEADING heading={'04/'}/>
+                <AbtHEADING heading={'04/'} variant={'head'}/>
                 <Certificates/>
             </div>
                 <div className={' w-full relative h-fit '}>
-                    <AbtHEADING heading={'CONTACT/'}/>
+                    <AbtHEADING heading={'CONTACT/'} variant={'sub'}/>
                     <Contact/>
                 </div>
             </div>

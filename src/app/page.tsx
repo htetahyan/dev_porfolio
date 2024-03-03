@@ -1,6 +1,6 @@
 
 import React from 'react';
-import dynamic from "next/dynamic";
+
 
 import Hero from "@/components/sections/Hero/Hero";
 import First from "@/components/sections/Hero/First";

@@ -2,9 +2,9 @@
 
 // Update the splitLetters function to correctly handle the refs
 'use client'
-import React, {useEffect, useRef} from "react";
+import React, { useRef} from "react";
 import {gsap} from "gsap";
-import {Text} from "@/components/Text";
+
 import {useGSAP} from "@gsap/react";
 
 export const splitLetters = (word: string, refs: React.MutableRefObject<HTMLSpanElement[]>, spanClassName: string) => {
@@ -49,7 +49,7 @@ export const revealText = (container: string, refs: React.MutableRefObject<HTMLS
     const refs = useRef([])
 useGSAP(()=>{
     const textContainer = document.querySelector('.text-container')
-refs.current.forEach((el,i)=>{
+refs.current.forEach((el)=>{
     gsap.to(el,{
         stagger: 0.1,
         y: 0,

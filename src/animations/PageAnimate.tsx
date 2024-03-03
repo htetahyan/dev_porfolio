@@ -1,6 +1,6 @@
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { gsap } from "gsap";
-import {Router} from "next/router";
+
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const createTimeline = (elementId: string, initialXPercent: number, finalXPercent: number, height: string) => {
     const tl = gsap.timeline();

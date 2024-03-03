@@ -1,11 +1,10 @@
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 
-import React, {useEffect} from "react";
+import React from "react";
 
 import {useIsomorphicLayoutEffect} from "@/utils/useisomorphiclayouteffect";
-import {useGSAP} from "@gsap/react";
-import {horizontalBgs} from "@/components/sections/Hero/Third";
+
 
 export default function HorizontalScroll({wrapperRef, racesRef}:{wrapperRef: React.MutableRefObject<null>,racesRef:React.MutableRefObject<null>}) {
 

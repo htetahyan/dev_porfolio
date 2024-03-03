@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 import Providers from "@/utils/Providers";
-import Header from "@/components/header/Header";
-import Menu from "@/components/menu/Menu";
 
 import localFont from "next/font/local";
 import {ReactNode} from "react";

@@ -1,4 +1,4 @@
-import {ReactNode, useEffect, useRef} from 'react';
+import {ReactNode, useRef} from 'react';
 import { useGSAP } from '@gsap/react';
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
@@ -6,11 +6,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import {usePathname} from "next/navigation";
 
 const LenisScroller = ({ children }: { children: ReactNode  }) => {
-    const lenisRef = useRef()
+
     const path=usePathname()
 
 
-  const {  } =  useGSAP(( contextSafe) => {
+  const {  } =  useGSAP(( ) => {
         gsap.registerPlugin(ScrollTrigger);
       const lenis = new Lenis()
 

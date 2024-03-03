@@ -1,5 +1,5 @@
 import React, {FC, forwardRef} from 'react';
-import PropTypes from 'prop-types';
+
 import {cva, VariantProps} from "class-variance-authority";
 import {cn} from "@/utils/utils";
 const btnVariants = cva(

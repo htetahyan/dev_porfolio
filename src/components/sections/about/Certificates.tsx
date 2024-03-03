@@ -21,6 +21,9 @@ const Certificates = () => {
             ease: 'none',
             opacity: 1
         })
+        return()=>{
+            gsap.killTweensOf(certificateRef.current)
+        }
     })
     return (
         <div className={'w-full grid grid-cols-1 lg:grid-cols-2 h-screen gap-2 relative '}>

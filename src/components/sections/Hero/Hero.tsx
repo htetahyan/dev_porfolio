@@ -1,5 +1,5 @@
 'use client'
-import React, {useContext, useRef} from 'react';
+import React, { useRef} from 'react';
 import {Text} from "@/components/Text";
 import {useGSAP} from "@gsap/react";
 import {gsap} from "gsap";
@@ -32,7 +32,7 @@ const Hero = () => {
 
                 })
                             // Add animations to the timeline
-               const tween= tl.to('.intro-split-p', {y: 0, stagger: 0.02})
+              tl.to('.intro-split-p', {y: 0, stagger: 0.02})
                     .to(refs.current, {yPercent: 0, stagger: 0.02})
 
 

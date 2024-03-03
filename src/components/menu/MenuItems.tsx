@@ -1,6 +1,6 @@
 import React from 'react';
 import TransitionLink from "@/animations/CustomLink";
-import {Facebook, Github,  Linkedin} from "@/assets/SvgExporter";
+
 import Link from "next/link";
 import { Text } from '../Text';
 

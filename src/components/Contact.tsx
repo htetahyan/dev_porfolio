@@ -10,7 +10,7 @@ import TransitionLink from "@/animations/CustomLink";
  const Contact=()=>{
     return (
         <div className={' h-[90vh] grid p-4'}>
-<div className={'grid grid-cols-2'}><div className={'grid'}>
+<div className={'grid lg:grid-cols-2 '}><div className={'grid'}>
     <div>
        <Text variant={'subHeading'} className={''}>{'Let\'s '}</Text>
 
@@ -25,10 +25,10 @@ import TransitionLink from "@/animations/CustomLink";
     </div>
 </div>
 
-            <div className={'flex justify-around items-end'}>
+            <div className={'flex justify-between items-center lg:items-end'}>
                 {socialLinks.map((social, index) => (
                  <Link key={index} href={social.path}>
-                     <Text  variant={'h3'} className={'tracking-wider text-hover uppercase'}
+                     <Text   className={'tracking-wider text-lg text-hover uppercase'}
                           font={'secondary'}>{social.label}</Text>
                  </Link>
                 ))}

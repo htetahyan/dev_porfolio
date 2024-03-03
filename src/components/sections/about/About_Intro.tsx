@@ -4,12 +4,10 @@ import React, { useRef, useState } from 'react';
 import { Text } from "@/components/Text";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import HorizontalScroll from "@/utils/HorizontalScroll";
 
-// Constants for animation durations and delays
-const ANIMATION_DURATION =  0.5;
-const ANIMATION_DELAY =  0.5;
+
 
 const AboutIntro = () => {
     const pageRef = useRef(null);

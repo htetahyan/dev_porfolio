@@ -35,7 +35,7 @@ const  worker= new Worker('/workers/MenuMouseMoveWorker.js');
                 handleMenuMouseMove(e as MouseEvent, menu)
             })
             if (contextSafe) {
-                menuContainer?.addEventListener('mouseleave', contextSafe((e) => {
+                menuContainer?.addEventListener('mouseleave', contextSafe(() => {
                     gsap.to(menu, {y:0 , x: 0, ease: "power4.out", duration: 0.5});
                 }))
             }

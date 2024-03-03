@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from "@/components/Text";
-import {Button} from "@/components/Button";
+
 import ThemeSwitcher from "@/components/header/ThemeSwitcher";
 
 const Header = () => {

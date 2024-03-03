@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Text } from "@/components/Text";
-import { gsap } from "gsap";
 
-const AbtHEADING = ({ heading }:{heading:string}) => {
+
+const AbtHEADING = ({ heading,variant }:{heading:string,variant:string}) => {
     // Prepend 'a' to the id to make it a valid CSS selector
 
 
@@ -13,7 +13,7 @@ const AbtHEADING = ({ heading }:{heading:string}) => {
         <div className={`  overflow-hidden w-full flex abt-section-text`}
         >
             {heading.split('').map((t, i) => (
-                <Text key={i} className={` text-8xl translate-y-[400px] opacity-0 will-change-auto`}>
+                <Text key={i} className={`${variant==='sub'?'text-4xl':'text-8xl'}  translate-y-[400px] opacity-0 will-change-auto`}>
                     {t}
                 </Text>
             ))}
