@@ -15,7 +15,7 @@ import {
 } from "@/assets/abt/tech-stacks/exporter";
 import {Text} from "@/components/Text";
 const windowWidth = typeof window !== 'undefined' ? window.innerWidth :  0;
-const circleRadius = windowWidth >  768 ? '250px' : '100px';
+const circleRadius =  windowWidth >  768 ?  '300px' :  '130px'
 const AboutTwo = () => {
     const pageRef = useRef(null)
     useGSAP(() => {
@@ -57,7 +57,7 @@ export default AboutTwo;
 // @ts-ignore
 const skillShowcase = ({ name, Icon }: { name: string; Icon: any }) => (
     <div className={' flex flex-col items-center abt-skills opacity-0 scale-0 txt  '}>
-        {Icon && <Icon className={' w-[15%] h-[15%] md:w-[10%] lg:w-[8%] lg:h-[8%]'} />}
+        {Icon && <Icon className={' w-[10%] h-[10%]  lg:w-[8%] lg:h-[8%]'} />}
         <Text  className={'text-[#0e1129] text-[0.9em] text-center w-fit'}>
             {name}
         </Text>
