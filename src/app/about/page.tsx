@@ -8,9 +8,17 @@ import Education from "@/components/sections/about/Education";
 import AbtHEADING from "@/components/sections/about/AbtHeading";
 import Certificates from "@/components/sections/about/Certificates";
 import Contact from "@/components/Contact";
+import {Metadata} from "next";
 
 
 const AboutTwo=dynamic(()=> import('@/components/sections/about/About_two'),{ssr: false})
+export const metadata :Metadata = {
+    title: 'About me',
+    keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan','about me','htet ah yan about'],
+    alternates: {
+        canonical: '/about',
+    }
+}
 const About = () => {
     return (
         <div className={'h-fit relative w-screen overflow-hidden'}>

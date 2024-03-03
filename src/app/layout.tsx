@@ -23,10 +23,11 @@ const NeueMontrealRegular=localFont(
 
 export const metadata: Metadata = {
   title: 'Htet Ah Yan',
+
   description: 'An awesome web developer who loves to build web applications.',
     metadataBase: new URL('https://htetahyan.vercel.app'),
+  keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan'],
 
-  
     robots: {
         index: true,
         follow: true,
@@ -42,13 +43,18 @@ export const metadata: Metadata = {
 
     },
 
-
+twitter: {
+  card: 'summary',
+  title: 'Htet Ah Yan',
+  description: 'An awesome web developer who loves to build web applications.',
+  creator: 'Htet Ah Yan',
+  images: ['https://htetahyan.vercel.app/opengraph.png']
+},
     openGraph: {
         title: 'Htet Ah Yan',
         description: 'An awesome web developer who loves to build web applications.',
         url: 'https://htetahyan.vercel.app/',
         releaseDate: '2023-03-02',
-
 
 
         images: [
@@ -59,12 +65,6 @@ export const metadata: Metadata = {
             }
         ]
     },
-    appLinks: {
-        web: {
-            url: 'https://htetahyan.vercel.app',
-        }
-    },
-
 
     }
 
