@@ -48,9 +48,10 @@ duration:0.1,
             <div className="min-h-[40vh] lg:min-h-[80vh] h-full w-full  relative">
                 {images.map((image, index) => (
                     <> {'src' in image ? (
-                        <Image fetchPriority={'low'}
-                               loading={'lazy'}
+                        <Image fetchPriority={'high'}
+                               loading={'eager'}
                                placeholder={'blur'}
+                               
                                blurDataURL={blurDataUrl}
 
                             key={index}

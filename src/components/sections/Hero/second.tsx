@@ -123,7 +123,7 @@ const lines=document.querySelectorAll('.second-line-showcase')
  </div>
                     <div className={'second-image-container w-full flex-1 '}>
                         <div className={'second-image-wrapper '}>
-                            <Image src={showCase.image} alt={'portal'} className={' second-image border-2 '}/>
+                            <Image src={showCase.image} alt={'portal'} fetchPriority='high' className={' second-image border-2 '}/>
                         </div>
 
                     </div>
