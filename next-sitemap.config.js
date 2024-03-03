@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: siteConfig.url,
   generateRobotsTxt: true, 
 
-  autoLastmod: false,
+  autoLastmod: true,sitemapSize: 7000,
   robotsTxtOptions: {
     policies: [
       {
