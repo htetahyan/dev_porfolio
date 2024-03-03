@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://htetahyan.vercel.app/sitemap.xml

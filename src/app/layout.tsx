@@ -80,7 +80,7 @@ twitter: {
             }
         ]
     },
-
+category:'Technology'
     }
 
 export default function RootLayout({

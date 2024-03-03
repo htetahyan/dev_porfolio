@@ -13,9 +13,7 @@ import {Metadata} from "next";
 
 const AboutTwo=dynamic(()=> import('@/components/sections/about/About_two'),{ssr: false})
 export const metadata :Metadata = {
-    title: 'About me',
-    keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan','about me','htet ah yan about'],
-    alternates: {
+  alternates: {
         canonical: '/about',
     }
 }
