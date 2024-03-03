@@ -89,10 +89,11 @@ export default function RootLayout({
 }) {
   return (
       <html lang="en" suppressHydrationWarning className={`${NeueMontreal.variable} ${NeueMontrealRegular.variable}  `}>
-<SpeedInsights/>
-      <body className={'bg-white'}>
-      <Providers>
 
+      <body className={'bg-white'}>
+      <SpeedInsights/>
+      <Providers>
+    
 
           {children}
 
