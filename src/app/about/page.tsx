@@ -12,11 +12,7 @@ import {Metadata} from "next";
 
 
 const AboutTwo=dynamic(()=> import('@/components/sections/about/About_two'),{ssr: false})
-export const metadata :Metadata = {
-  alternates: {
-        canonical: '/about',
-    }
-}
+
 const About = () => {
     return (
         <div className={'h-fit relative w-screen overflow-hidden'}>

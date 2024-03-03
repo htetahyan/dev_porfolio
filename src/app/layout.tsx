@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 import Providers from "@/utils/Providers";
-
+import siteConfig from '../../site-config';
 import localFont from "next/font/local";
 import {ReactNode} from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -23,19 +23,18 @@ const NeueMontrealRegular=localFont(
 )
 
 export const metadata: Metadata = {
-  title: 'Htet Ah Yan',
+  title: siteConfig.title,
 
-  description: 'An innovative software engineer.',
-    metadataBase: new URL('https://htetahyan.vercel.app'),
+  description: siteConfig.tagline,
+    metadataBase: new URL(siteConfig.url),
   keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan'],
-
+alternates: {
+    canonical: new URL(siteConfig.url),
+},
     robots: {
         index: true,
         follow: true,
-        googleBot: {
-            follow: true,
-            index: true
-        }
+     
     },
     icons:[{
       rel: 'icon',
@@ -81,8 +80,13 @@ twitter: {
         ]
     },
 category:'Technology'
-    }
 
+    }
+    export const viewport = {
+        width: 'device-width',
+        initialScale: 1,
+      };
+      
 export default function RootLayout({
   children
 }: {

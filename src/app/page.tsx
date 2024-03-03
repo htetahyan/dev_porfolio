@@ -8,11 +8,7 @@ import Second from "@/components/sections/Hero/second";
 import Third from "@/components/sections/Hero/Third";
 import AboutIntro from '@/components/sections/about/About_Intro';
 import {Metadata} from "next";
-export const metadata :Metadata = {
-    alternates: {
-        canonical: '/',
-    }
-}
+
 const Page = () => {
     return (
         <div className={''}>
