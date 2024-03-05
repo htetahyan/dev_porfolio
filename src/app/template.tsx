@@ -4,29 +4,21 @@
 import {ReactNode, useRef} from "react";
 import { animatePageIn } from "@/animations/PageAnimate";
 import {gsap} from "gsap";
-
-
 import {useGSAP} from "@gsap/react";
 
-import Menu from "@/components/menu/Menu";
 import Header from "@/components/header/Header";
+import Menu from "@/components/menu/Menu";
 import QuickToFunc = gsap.QuickToFunc;
 
-
 export default function Template({ children }: { children: ReactNode }) {
-
     const container=    useRef(null)
     const introRef = useRef(null);
     let xTo = useRef<QuickToFunc | null>(null);
     let yTo = useRef<QuickToFunc | null>(null);
-
-
-
    const{contextSafe}= useGSAP((context, contextSafe) => {
 const  worker= new Worker('/workers/MenuMouseMoveWorker.js');
         animatePageIn();
         const mm = gsap.matchMedia();
-
         mm.add("(min-width: 1024px)", () => {
             const texts= document.querySelectorAll('.text');
             const menuContainer= document.querySelector('.menu-container');

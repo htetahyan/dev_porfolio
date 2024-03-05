@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://htetahyan.vercel.app/</loc>
-        <lastmod>2023-03-02</lastmod>
-    </url>
-    <url>
-        <loc>https://htetahyan.vercel.app/works</loc>
-        <lastmod>2023-03-02</lastmod>
-    </url>
-    <url>
-        <loc>https://htetahyan.vercel.app/about</loc>
-        <lastmod>2023-03-02</lastmod>
-    </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://htetahyan.vercel.app/sitemap-0.xml</loc></sitemap>
+</sitemapindex>

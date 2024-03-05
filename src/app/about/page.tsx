@@ -7,12 +7,13 @@ import Abt from "@/components/sections/about/abt";
 import Education from "@/components/sections/about/Education";
 import AbtHEADING from "@/components/sections/about/AbtHeading";
 import Certificates from "@/components/sections/about/Certificates";
-import Contact from "@/components/Contact";
-import {Metadata} from "next";
 
+import {Metadata} from "next";
+import metaTag from "@/components/MetaTag";
+const Contact=dynamic(()=> import('@/components/Contact'),{ssr: false})
 
 const AboutTwo=dynamic(()=> import('@/components/sections/about/About_two'),{ssr: false})
-
+export const metadata: Metadata =metaTag
 const About = () => {
     return (
         <div className={'h-fit relative w-screen overflow-hidden'}>

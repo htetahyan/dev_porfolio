@@ -3,8 +3,9 @@ import React from 'react';
 import {gsap} from "gsap";
 
 import { useGSAP } from "@gsap/react";
-import MenuItems from "@/components/menu/MenuItems";
 
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import('@/components/menu/MenuItems'))
 const Menu = () => {
     const [open, setOpen] = React.useState(false);
     const container = React.useRef(null);
@@ -21,6 +22,7 @@ const Menu = () => {
          delay: 0.3
          })
 return () => {
+    gsap.killTweensOf(menu)
     gsap.killTweensOf('.menu-modal')
 }
     },{scope: container,dependencies: [open]})

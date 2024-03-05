@@ -6,6 +6,8 @@ import {gsap} from "gsap";
 import portal from '@/assets/pngs/portal.png'
 import yearbook from '@/assets/pngs/yearbook.png'
 import Image from "next/image";
+import TransitionLink from "@/animations/CustomLink";
+
 const Second = () => {
     const secondRef = useRef(null);
     useGSAP(() => {
@@ -104,9 +106,9 @@ const lines=document.querySelectorAll('.second-line-showcase')
 
     return (
         <div ref={secondRef} className={' w-full lg:w-[90%]  overflow-hidden'}>
-            <div className={'max-h-max  overflow-hidden'}><Text variant={'heading'}
-                                                                className={'text-center  second-text-1 translate-y-[150%]'}
-                                                                font={'secondary'}>VIEW ALL PROJECTS-{'>'}</Text>
+            <div className={'max-h-max  overflow-hidden grid justify-center items-center'}>
+           <TransitionLink href={'/projects'}  label={'     VIEW ALL PROJECTS >'}       className={' text text-5xl md:text-7xl text-black lg:text-8xl  second-text-1 translate-y-[150%]'}/>
+
                 <div className={'w-0 mx-auto h-1 second-line bg-black'}></div>
             </div>
             {showCases.map((showCase,index)=> {
@@ -115,7 +117,7 @@ const lines=document.querySelectorAll('.second-line-showcase')
  <div className={'second-text w-full flex-1 '}>
      {showCase.title.split(' ').map((t,i)=>{
          return(
-             <Text key={i} className={'text-4xl md:text-6xl lg:text-9xl font-secondary  translate-y-[150%]'}>{t}</Text>
+             <Text key={i} className={'text-4xl md:text-6xl lg:text-9xl font-secondary opacity-0  translate-y-[150%]'}>{t}</Text>
 
          )
      })}

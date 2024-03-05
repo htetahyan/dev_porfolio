@@ -33,7 +33,7 @@ const textVariants = cva(
 defaultVariants: {
     variant: 'h1',
     wide: 'normal',
-    font: 'primary',
+    font: 'secondary',
 
 
 }

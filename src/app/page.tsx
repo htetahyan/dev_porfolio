@@ -1,14 +1,13 @@
 
 import React from 'react';
-
-
-import Hero from "@/components/sections/Hero/Hero";
-import First from "@/components/sections/Hero/First";
-import Second from "@/components/sections/Hero/second";
-import Third from "@/components/sections/Hero/Third";
-import AboutIntro from '@/components/sections/about/About_Intro';
 import {Metadata} from "next";
-
+import metaTag from "@/components/MetaTag";
+import dynamic from "next/dynamic";
+const Hero=dynamic(()=>import('@/components/sections/Hero/Hero'))
+const First=dynamic(()=>import('@/components/sections/Hero/First'))
+const Second=dynamic(()=>import('@/components/sections/Hero/second'))
+const Third=dynamic(()=>import('@/components/sections/Hero/Third'))
+export const metadata: Metadata =metaTag
 const Page = () => {
     return (
         <div className={''}>
@@ -17,12 +16,12 @@ const Page = () => {
                 <Hero/>
 
             </section>
-            
+
             <section className="h-full  flex items-center relative  justify-center">
                 <First/>
 
             </section>
-          
+
             <section className="h-full w-full p-8">
                 <Second/>
 
@@ -31,7 +30,7 @@ const Page = () => {
                 <Third/>
 
             </section>
-          
+
         </div>
 
     );

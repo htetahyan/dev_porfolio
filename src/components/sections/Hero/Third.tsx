@@ -15,22 +15,17 @@ const Third = () => {
     const wrapperRef = useRef(null);
     const racesRef = useRef(null);
     HorizontalScroll({wrapperRef, racesRef})
-    const {}=useGSAP(()=>{
+    useGSAP(()=>{
         const temp=document.querySelector('.template')
         const tl=gsap.timeline({
-
             scrollTrigger: {
                 trigger: ThirdContainer.current,
                 start: '-=800px',
-
                 end: '-=400px',
                 scrub:  true
             },
         })
-
-
-
-            tl.to(temp,{
+                    tl.to(temp,{
                 backgroundImage:'linear-gradient(to right,  #F5F5F5,#FBD3CB,#FFFFFF)',
                 duration:  1.5,
                 ease: "power2.in",
@@ -59,9 +54,7 @@ const Third = () => {
             gsap.killTweensOf('.scroll-reveal-text');
             gsap.killTweensOf('.horizontal-element')
             gsap.killTweensOf(ThirdContainer.current)
-
-
-        }
+                    }
 
     },{scope: ThirdContainer})
 
