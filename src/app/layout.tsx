@@ -10,6 +10,7 @@ import metaTag from "@/components/MetaTag";
 
 
 
+
 const NeueMontreal=localFont(
     {
         src: '../fonts/NeueMontreal-Bold.woff2',
