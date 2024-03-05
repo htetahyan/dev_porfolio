@@ -7,7 +7,10 @@ const metaTag: Metadata={
     description: siteConfig.tagline,generator: 'Next.js',
     referrer: 'origin-when-cross-origin',
 
+verification: {
+  google:'dPlXk4YX7F4QLgA7pGjm0Q0HavmZ02eWEvOYiIdTjq8'
 
+},
     applicationName: 'Htet Ah Yan',
     appleWebApp: true,
     formatDetection: {

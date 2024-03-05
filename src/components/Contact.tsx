@@ -15,7 +15,7 @@ import TransitionLink from "@/animations/CustomLink";
        <Text variant={'subHeading'} className={''}>{'Let\'s '}</Text>
 
     <Text variant={'subHeading'} >contact</Text></div>
-    <Text className={'text-4xl font-semibold font-secondary items-end '}>htetahyan@gmail.com</Text>
+    <Text className={'text-3xl md:text-4xl font-semibold font-secondary items-end '}>htetahyan@gmail.com</Text>
     <Text className={'text-2xl items-end '}>© 2024 | Htet Ah Yan</Text>
 </div>
     <div className={'bg-amber-400 grid place-items-center rounded-xl'}>
