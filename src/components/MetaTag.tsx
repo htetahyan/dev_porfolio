@@ -27,12 +27,13 @@ verification: {
         follow: true,
 
     },
-    icons:[{
-        rel: 'icon',
-        type: 'image/png',
-        sizes:'16x16',
-        url: '/favicons/android-chrome-192x192.png'
-    }
+    icons:[
+    {
+        rel:'icon',
+sizes:'16x16',
+            url:'/favicon.ico',
+            type:'image/x-icon'
+        }
         ,{
             rel: 'icon',
             type: 'image/png',

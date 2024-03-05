@@ -7,7 +7,7 @@ const Hero=dynamic(()=>import('@/components/sections/Hero/Hero'))
 const First=dynamic(()=>import('@/components/sections/Hero/First'))
 const Second=dynamic(()=>import('@/components/sections/Hero/second'))
 const Third=dynamic(()=>import('@/components/sections/Hero/Third'))
-export const metadata: Metadata =metaTag
+
 const Page = () => {
     return (
         <div className={''}>

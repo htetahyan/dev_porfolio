@@ -24,6 +24,7 @@ const NeueMontrealRegular=localFont(
 )
 
 export const metadata: Metadata =metaTag
+
     export const viewport = {
         width: 'device-width',
         initialScale: 1,
