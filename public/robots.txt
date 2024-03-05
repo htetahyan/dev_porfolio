@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://htetahyan.vercel.app/
+
+# Sitemaps
+Sitemap: https://htetahyan.vercel.app/sitemap.xml
