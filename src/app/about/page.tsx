@@ -10,13 +10,19 @@ import Certificates from "@/components/sections/about/Certificates";
 
 import {Metadata} from "next";
 import metaTag from "@/components/MetaTag";
+import {JsonLd} from "@/utils/Json-ld";
 const Contact=dynamic(()=> import('@/components/Contact'),{ssr: false})
 
 const AboutTwo=dynamic(()=> import('@/components/sections/about/About_two'),{ssr: false})
 export const metadata: Metadata =metaTag
+
 const About = () => {
     return (
         <div className={'h-fit relative w-screen overflow-hidden'}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JsonLd) }}
+            />
             <div className={' w-full p-4'}>
                 <Abt/>
 
