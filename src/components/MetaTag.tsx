@@ -9,7 +9,7 @@ const metaTag: Metadata={
 
 verification: {
   google:process.env.NEXT_PUBLIC_GOOGLE_KEY,
-yandex:process.env.NEXT_PUBLIC_YANDEX_KEY
+
 },
     applicationName: 'Htet Ah Yan',
     appleWebApp: true,
