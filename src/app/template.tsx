@@ -9,8 +9,7 @@ import {useGSAP} from "@gsap/react";
 import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
 import QuickToFunc = gsap.QuickToFunc;
-import {Metadata} from "next";
-import metaTag from "@/components/MetaTag";
+
 
 export default function Template({ children }: { children: ReactNode }) {
 
