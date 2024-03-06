@@ -9,8 +9,11 @@ import {useGSAP} from "@gsap/react";
 import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
 import QuickToFunc = gsap.QuickToFunc;
-
+import {Metadata} from "next";
+import metaTag from "@/components/MetaTag";
+export const metadata: Metadata =metaTag
 export default function Template({ children }: { children: ReactNode }) {
+    console.log(metadata)
     const container=    useRef(null)
     const introRef = useRef(null);
     let xTo = useRef<QuickToFunc | null>(null);
@@ -76,7 +79,7 @@ const MouseMove=contextSafe((e: MouseEvent)=>{
     yTo.current?.(e.clientY)
 
 })
-    console.log(process.env.NEXT_PUBLIC_YANDEX_KEY)
+
     return (<div className={'template '} ref={container} onMouseMove={(e  )=>
             //@ts-ignore
             MouseMove(e )}
