@@ -11,9 +11,9 @@ import Menu from "@/components/menu/Menu";
 import QuickToFunc = gsap.QuickToFunc;
 import {Metadata} from "next";
 import metaTag from "@/components/MetaTag";
-export const metadata: Metadata =metaTag
+
 export default function Template({ children }: { children: ReactNode }) {
-    console.log(metadata)
+
     const container=    useRef(null)
     const introRef = useRef(null);
     let xTo = useRef<QuickToFunc | null>(null);
