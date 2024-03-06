@@ -76,7 +76,7 @@ const MouseMove=contextSafe((e: MouseEvent)=>{
     yTo.current?.(e.clientY)
 
 })
-
+    console.log(process.env.NEXT_PUBLIC_YANDEX_KEY)
     return (<div className={'template '} ref={container} onMouseMove={(e  )=>
             //@ts-ignore
             MouseMove(e )}

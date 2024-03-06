@@ -8,8 +8,8 @@ const metaTag: Metadata={
     referrer: 'origin-when-cross-origin',
 
 verification: {
-  google:'dPlXk4YX7F4QLgA7pGjm0Q0HavmZ02eWEvOYiIdTjq8'
-
+  google:process.env.NEXT_PUBLIC_GOOGLE_KEY,
+yandex:process.env.NEXT_PUBLIC_YANDEX_KEY
 },
     applicationName: 'Htet Ah Yan',
     appleWebApp: true,
