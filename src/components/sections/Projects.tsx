@@ -148,19 +148,19 @@ export const ProjectsDatas = [{
     title: 'PORTAL',
     description: 'a social media platform for developers',
     assets: [{type: 'image', src: portal}, {type: 'image', src: portal_2},
-        {type: 'explanation', contributions:["setting up env configurations","integrated with aws s3 bucket"],  href: 'https://www.google.com',linkText:"source code"}],
+        {type: 'explanation', contributions:["setting up env configurations","integrated with aws s3 bucket"],  href: 'https://portal.edusnglobal.co.uk/',linkText:"Live URL"}],
 },{
     title: 'EDUSOCIAL',
     description: 'a social media platform for developers',
     assets: [{type: 'image', src: social}, {type: 'image', src: social_2},
-        {type: 'explanation', contributions:['integrated google adult content filter api', 'integrated google location api'], href: 'https://www.google.com',linkText:"source code"}],
+        {type: 'explanation', contributions:['integrated google adult content filter api', 'integrated google location api'], href: 'https://edusnsocial.com/',linkText:"Live URL"}],
 },{
     title: 'YEARBOOK',
     description: 'Yearbook website for students',
     assets: [{type: 'image', src: yearbook}, {type: 'image', src: yearbook_2},{type: 'image', src: yearbook_3},
         {type: 'image', src: yearbook_4},{type: 'image', src: yearbook_5},
         {type: 'explanation', contributions:['spring security authentication with otp base register', 'integrated with aws s3 bucket',
-                'implemented like and comment feature on yearbook cards!',  'implemented rtk query with next js front end'],  href: 'https://www.google.com',linkText:"source code"}],
+                'implemented like and comment feature on yearbook cards!',  'implemented rtk query with next js front end'],  href: 'https://yearbook.edusnglobal.co.uk/',linkText:"Live URL"}],
 },{
     title: 'REPORT',
     description: 'Yearbook website for students',

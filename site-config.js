@@ -1,12 +1,11 @@
 const siteConfig = {
-    title: "My Portfolio",
+    title: "Htet Ah Yan's Portfolio",
     tagline:
-      'An innovative software engineer',
+      'Welcome to the digital showcase of Htetahyan, a passionate and dedicated professional in the field of software development.',
     url: 'https://htetahyan.vercel.app/',
     baseUrl: '/',
     projectName: 'htetahyan',
     organizationName: 'htetahyan',
-
 
   };
 
