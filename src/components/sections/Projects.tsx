@@ -15,7 +15,6 @@ const Projects = () => {
     useIsomorphicLayoutEffect(() => {
         gsap.registerPlugin(Observer);
         let sectionContainer = document.querySelector(".section-container");
-
         let sections = document.querySelectorAll(".section"),
             images = document.querySelectorAll(".bg"),
             outerWrappers = gsap.utils.toArray(".outer"),
