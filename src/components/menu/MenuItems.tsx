@@ -41,17 +41,10 @@ const items=[{
     label:'About',
     path: '/about',
 }]
-export const socialLinks = [
-    {
-        label: 'Github',
-        path: 'https://github.com/htetahyan',
 
-    },{
-    label:'Linkedin',
-    path:'https://www.linkedin.com/in/htetahyan/',
-    },
-    {
-        label: 'Facebook',
-        path: 'https://www.facebook.com/htetahyan',
-    }
+export const socialLinks = [
+    {label:"Github",path:"https://github.com/htetahyan"},
+
+    {label:"LinkedIn",path:"https://linkedin.com/htet-ahyan"},
+    {label:"Facebook",path:"https://www.facebook.com/profile.php?id=100083336276167&mibextid=ZbWKwL"},
 ]

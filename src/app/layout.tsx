@@ -8,7 +8,7 @@ import {ReactNode} from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import metaTag from "@/components/MetaTag";
 
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 const NeueMontreal=localFont(
@@ -41,6 +41,7 @@ export default function RootLayout({
 
       <body className={'bg-white'}>
       <SpeedInsights/>
+      <Analytics/>
       <Providers>
 
 
