@@ -107,7 +107,7 @@ const lines=document.querySelectorAll('.second-line-showcase')
     return (
         <div ref={secondRef} className={' w-full lg:w-[90%]  overflow-hidden'}>
             <div className={'max-h-max  overflow-hidden grid justify-center items-center'}>
-           <TransitionLink href={'/projects'}  label={'     VIEW ALL PROJECTS >'}       className={' text text-5xl md:text-7xl text-black lg:text-8xl  second-text-1 translate-y-[150%]'}/>
+           <TransitionLink href={'/works'}  label={'     VIEW ALL PROJECTS >'}       className={' text text-5xl md:text-7xl text-black lg:text-8xl  second-text-1 translate-y-[150%]'}/>
 
                 <div className={'w-0 mx-auto h-1 second-line bg-black'}></div>
             </div>

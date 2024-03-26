@@ -4,7 +4,20 @@ import { gsap } from "gsap";
 
 import { Observer } from "gsap/dist/Observer";
 
-import {portal,yearbook,portal_2,report,report_2,social,social_2,yearbook_2,yearbook_3,yearbook_4,yearbook_5} from '@/assets/pngs/exporter';
+import {
+    portal,
+    yearbook,
+    portal_2,
+    report,
+    report_2,
+    social,
+    social_2,
+    yearbook_2,
+    yearbook_3,
+    yearbook_4,
+    yearbook_5,
+    blog_1, blog_2, blog_3, blog_4
+} from '@/assets/pngs/exporter';
 import {Text} from "@/components/Text";
 
 
@@ -144,6 +157,15 @@ const bgColors = ['linear-gradient(to right,  #F5F5F5,#FBD3CB,#FFFFFF)',
     'linear-gradient(to right,  #F5F5F5,#FFE7B3,#FFFFFF)'
 ]
 export const ProjectsDatas = [{
+    title: 'BLOGS',
+    description: 'My Personal tech blogs website',
+    assets: [{type: 'image', src: blog_1}, {type: 'image', src: blog_2},
+        {type: 'image', src: blog_3},{type: 'image', src: blog_4},
+
+        {type: 'explanation', contributions:[ 'host mdx to github',
+
+                'use next-remote-mdx for mdx rendering','integrated  mySQL and drizzle orm','implemented custom google oAuth callback '],href:'https://blogs-htetahyan.vercel.app/',linkText:"Live URL"}],
+},{
     title: 'PORTAL',
     description: 'a social media platform for developers',
     assets: [{type: 'image', src: portal}, {type: 'image', src: portal_2},
