@@ -7,6 +7,7 @@ import portal from '@/assets/pngs/portal.png'
 import yearbook from '@/assets/pngs/yearbook.png'
 import Image from "next/image";
 import TransitionLink from "@/animations/CustomLink";
+import {blurDataUrl} from "@/components/Carousel";
 
 const Second = () => {
     const secondRef = useRef(null);
@@ -125,7 +126,11 @@ const lines=document.querySelectorAll('.second-line-showcase')
  </div>
                     <div className={'second-image-container w-full flex-1 '}>
                         <div className={'second-image-wrapper '}>
-                            <Image src={showCase.image} alt={'portal'} fetchPriority='high' className={' second-image border-2 '}/>
+                            <Image src={showCase.image} alt={'portal'}  fetchPriority={'high'}
+                                   loading={'eager'}
+                                   placeholder={'blur'}
+
+                                   blurDataURL={blurDataUrl} className={' second-image border-2 '}/>
                         </div>
 
                     </div>

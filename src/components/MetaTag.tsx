@@ -11,6 +11,7 @@ verification: {
   google:process.env.NEXT_PUBLIC_GOOGLE_KEY,
 
 },
+    creator: 'Htet Ah Yan',
     applicationName: 'Htet Ah Yan',
     appleWebApp: true,
     formatDetection: {
@@ -18,7 +19,7 @@ verification: {
     },
 
     metadataBase: new URL(siteConfig.url),
-    keywords: ['htetahyan', 'htetahyan.vercel.app', 'htetahyan.com','htetahyan portfolio','next','htet ah yan'],
+    keywords: ['htetahyan', 'htetahyan.online', 'htetahyan.com','htetahyan portfolio','next','htet ah yan'],
     alternates: {
         canonical: new URL(siteConfig.url),
     },
@@ -54,20 +55,20 @@ sizes:'16x16',
         title: 'Htet Ah Yan',
         description: 'An innovative software engineer.',
         creator: 'Htet Ah Yan',
-        images: ['https://htetahyan.vercel.app/opengraph.png']
+        images: ['https://htetahyan.online/opengraph.png']
     },
     openGraph: {
 
         title: 'Htet Ah Yan\'s Portfolio',
         type: 'website',
         description: 'An awesome web developer who loves to build web applications.',
-        url: 'https://htetahyan.vercel.app/',
+        url: 'https://htetahyan.online',
         siteName: 'Htet Ah Yan',
 
 
         images: [
             {
-                url: 'https://htetahyan.vercel.app/opengraph.png',
+                url: 'https://htetahyan.online/opengraph.png',
                 width: 1200,
                 height: 630
             }
