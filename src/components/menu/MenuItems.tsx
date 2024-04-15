@@ -45,6 +45,6 @@ const items=[{
 export const socialLinks = [
     {label:"Github",path:"https://github.com/htetahyan"},
 
-    {label:"LinkedIn",path:"https://linkedin.com/htet-ahyan"},
+    {label:"LinkedIn",path:"https://linkedin.com/in/htet-ahyan"},
     {label:"Facebook",path:"https://www.facebook.com/profile.php?id=100083336276167&mibextid=ZbWKwL"},
 ]

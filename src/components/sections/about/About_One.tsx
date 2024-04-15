@@ -14,7 +14,7 @@ const pageRef=useRef(null)
     return (
         <div ref={pageRef} className={'relative grid opacity-0 translate-x-1/2  lg:grid-cols-2 h-full '}>
 <div className={'grid place-items-center'}>
-            <Text variant={'h3'} className={'text-[#0e1129] '}>I am a Software Engineer who based in Yangon and currently living in Bangkok,Thailand! </Text>
+            <Text variant={'h3'} className={'text-[#0e1129] '}>I am a Software Engineer who based in Yangon! </Text>
 </div>     <div className={'relative  bg-amber-100 flex items-center  overflow-hidden'}>   <Image fetchPriority={'low'}
                         loading={'lazy'}
                         placeholder={'blur'} className={'h-full object-contain'}
