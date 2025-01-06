@@ -4,10 +4,11 @@ import {Text} from "@/components/Text";
 import {useGSAP} from "@gsap/react";
 import {gsap} from "gsap";
 import portal from '@/assets/pngs/portal.png'
-import yearbook from '@/assets/pngs/yearbook.png'
+import tst from '@/assets/pngs/tst.png'
 import Image from "next/image";
 import TransitionLink from "@/animations/CustomLink";
 import {blurDataUrl} from "@/components/Carousel";
+import { contentally, contentally_2, tst_2, tts } from '@/assets/pngs/exporter';
 
 const Second = () => {
     const secondRef = useRef(null);
@@ -145,10 +146,14 @@ const lines=document.querySelectorAll('.second-line-showcase')
 };
 
 export default Second;
-const showCases = [{
+const showCases = [
+    {title: 'Text to speech',image:tts},
+    {title:'content ally.ai',image:contentally},{
     title: 'EDUSN PORTAL',
     image: portal
 }, {
-    title: 'EDUSN YEARBOOK',
-    image: yearbook
-}]
+    title: 'tryskills test .com',
+    image: tst
+}, 
+
+]

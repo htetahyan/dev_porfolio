@@ -16,7 +16,11 @@ import {
     yearbook_3,
     yearbook_4,
     yearbook_5,
-    blog_1, blog_2, blog_3, blog_4
+    blog_1, blog_2, blog_3, blog_4,contentally,tst,tst_2,contentally_2,
+    tts,
+    tts_2,
+    tts_3,
+    tts_4
 } from '@/assets/pngs/exporter';
 import {Text} from "@/components/Text";
 
@@ -36,6 +40,7 @@ const Projects = () => {
             wrap = gsap.utils.wrap(0, sections.length),
             animating: boolean;
       const projectTitle=document.querySelectorAll('.project-title')
+      const projectDescription=document.querySelectorAll('.project-description')
         gsap.set(outerWrappers, { yPercent: 100 });
         gsap.set(innerWrappers, { yPercent: -100 });
 
@@ -55,6 +60,14 @@ const Projects = () => {
                    opacity: index ===i?1:0
                })
            })
+           projectDescription.forEach((pj,i)=> {
+            gsap.to(pj,{
+                delay:1,
+                ease:'power1.in',
+                opacity: index ===i?1:0
+            })
+        })
+
 
             let fromTop = direction === -1,
                 dFactor = fromTop ? -1 : 1,
@@ -116,7 +129,7 @@ gotoSection(0,1)
 
                                 <div className={'flex flex-col justify-center h-full'}>
                                     <Text variant={'heading'} className={'project-title opacity-0'}>{project.title}</Text>
-
+<Text variant={'body'} className={'project-description opacity-0 text-center text-lg relative left-10'}>{project.description}</Text>
                                     <div className={'w-screen  lg:w-[60vw]   '}>
 
                                         <Carousel
@@ -156,7 +169,11 @@ const bgColors = ['linear-gradient(to right,  #F5F5F5,#FBD3CB,#FFFFFF)',
     'linear-gradient(to right,  #F5F5F5,#ECD9FA,#FFFFFF)',
     'linear-gradient(to right,  #F5F5F5,#FFE7B3,#FFFFFF)'
 ]
-export const ProjectsDatas = [{
+export const ProjectsDatas = [
+    {title:'AI TEXT TO SPEECH',description:'TTS Platform(archieved) using azure cognitive services',assets:[{type:'image',src:tts},{type:'image',src:tts_2},{type:'image',src:tts_3},{type:'image',src:tts_4}]},
+    {title:'CONTENTALLY',description:'contentally is a platform for building resume focus on users in Myanmar',assets:[{type:'image',src:contentally}]},
+    {title:'TRYSKILLSTEST',description:'tryskillstest is  an AI powered  platform for creating interview tests and questions ',assets:[{type:'image',src:tst},{type:'image',src:tst_2}]},
+{
     title: 'BLOGS',
     description: 'My Personal tech blogs website',
     assets: [{type: 'image', src: blog_1}, {type: 'image', src: blog_2},
